@@ -1,0 +1,34 @@
+@use 'presets' as *;
+@use 'mixins' as *;
+
+/* navbar */
+.navbar {
+  @include lg-min {
+    margin-bottom: 136px;
+  }
+  @include lg {
+    margin-bottom: 70px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-sm $gap-lg;
+
+    @include md {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $color-black;
+    padding: 0.5em 3px 0.5em 0;
+    letter-spacing: $letter-spacing;
+
+    &--active {
+      color: $color-primary;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,50 +1,7 @@
 @use 'presets' as *;
 @use 'mixins' as *;
 
-/* header */
-.header {
-  background-color: $color-gray-light;
-  padding-top: 69px;
-
-  @include lg-min {
-    padding-bottom: 141px;
-  }
-  @include lg {
-    padding-bottom: 69px;
-  }
-}
-
-.navbar {
-  @include lg-min {
-    margin-bottom: 136px;
-  }
-  @include lg {
-    margin-bottom: 70px;
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap-sm $gap-lg;
-
-    @include md {
-      justify-content: center;
-    }
-  }
-
-  &__link {
-    display: block;
-    color: $color-black;
-    padding: 0.5em 3px 0.5em 0;
-    letter-spacing: $letter-spacing;
-
-    &--active {
-      color: $color-primary;
-      font-weight: 500;
-    }
-  }
-}
-
+/* content */
 .content {
   display: flex;
   flex-direction: column;

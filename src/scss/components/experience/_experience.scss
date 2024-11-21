@@ -21,18 +21,3 @@
     }
   }
 }
-
-.experience-item {
-  display: flex;
-  gap: $gap;
-
-  &__number {
-    font-size: 1.3125rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  &__image {
-    order: -1;
-  }
-}
