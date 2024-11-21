@@ -1,50 +1,87 @@
+@use 'presets' as *;
+@use 'mixins' as *;
+
 /* header */
 .header {
   background-color: $color-gray-light;
   padding-top: 69px;
-  padding-bottom: 141px;
+
+  @include lg-min {
+    padding-bottom: 141px;
+  }
+  @include lg {
+    padding-bottom: 69px;
+  }
 }
+
 .navbar {
-  margin-bottom: 136px;
+  @include lg-min {
+    margin-bottom: 136px;
+  }
+  @include lg {
+    margin-bottom: 70px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-sm $gap-lg;
+
+    @include md {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $color-black;
+    padding: 0.5em 3px 0.5em 0;
+    letter-spacing: $letter-spacing;
+
+    &--active {
+      color: $color-primary;
+      font-weight: 500;
+    }
+  }
 }
-.navbar__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $gap-sm $gap-lg;
-}
-.navbar__link {
-  display: block;
-  color: $color-black;
-  padding: 0.5em 3px 0.5em 0;
-  letter-spacing: $letter-spacing;
-}
-.navbar__link--active {
-  color: $color-primary;
-  font-weight: 500;
-}
+
 .content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  max-width: $container-secondary;
-}
-.content__title {
-  margin: 0 0 33px;
-  font-size: 3rem;
-  font-weight: 500;
-}
-.content__description {
-  color: $color-secondary;
-  margin-bottom: 57px;
-}
-.content__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 225px;
-  min-height: 65px;
-  color: $color-white;
-  background-color: $color-primary;
-  letter-spacing: $letter-spacing;
-  padding: 0.5em 1em;
+
+  @include md-min {
+    max-width: $container-secondary;
+    align-items: flex-start;
+  }
+  @include md {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 33px;
+    font-size: 3rem;
+    font-weight: 500;
+
+    @include md {
+      line-height: 1.25;
+    }
+  }
+
+  &__description {
+    color: $color-secondary;
+    margin-bottom: 57px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 225px;
+    min-height: 65px;
+    color: $color-white;
+    background-color: $color-primary;
+    letter-spacing: $letter-spacing;
+    padding: 0.5em 1em;
+  }
 }

@@ -1,3 +1,6 @@
+@use 'presets' as *;
+@use 'mixins' as *;
+
 /* experience */
 .experience {
   padding-top: 100px;
@@ -7,9 +10,15 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: $gap-lg;
+
+    @include lg-min {
+      justify-content: space-between;
+    }
+    @include lg {
+      justify-content: space-evenly;
+    }
   }
 }
 

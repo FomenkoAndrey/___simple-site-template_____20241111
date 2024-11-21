@@ -1,3 +1,6 @@
+@use 'presets' as *;
+@use 'mixins' as *;
+
 /* video */
 .video {
   background-color: $color-gray-light;
@@ -5,8 +8,19 @@
 
   &__iframe {
     border: 0;
-    height: 600px;
     width: 100%;
     display: block;
+
+    @include lg-min {
+      height: 600px;
+    }
+
+    @include lg-md {
+      height: 450px;
+    }
+
+    @include md {
+      height: 350px;
+    }
   }
 }
