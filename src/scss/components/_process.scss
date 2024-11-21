@@ -1,0 +1,7 @@
+/* process */
+.process {
+  background-color: $color-gray-light;
+  margin-bottom: -42px;
+
+  @include section;
+}

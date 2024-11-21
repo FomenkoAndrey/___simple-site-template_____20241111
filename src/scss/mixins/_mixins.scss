@@ -1,0 +1,21 @@
+@mixin section() {
+  padding-top: 105px;
+  padding-bottom: 92px;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    color: $color-secondary;
+    text-align: center;
+  }
+}
+
+@mixin container($width) {
+  width: min(100% - $gap-lg, $width);
+  margin-inline: auto;
+}

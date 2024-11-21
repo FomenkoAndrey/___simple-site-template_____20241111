@@ -1,0 +1,49 @@
+@import 'presets/varibles';
+@import 'presets/skin';
+
+@import 'mixins/extends';
+@import 'mixins/mixins';
+
+@import 'common/normalize';
+@import 'common/typography';
+@import 'common/classes';
+
+@import 'components/header';
+@import 'components/about';
+@import 'components/experience';
+@import 'components/process';
+@import 'components/video';
+@import 'components/footer';
+
+@media (max-width: 992px) {
+  .header {
+    background-color: $color-gray-light;
+    padding-bottom: 69px;
+  }
+  .navbar {
+    margin-bottom: 70px;
+  }
+  .experience__container {
+    justify-content: space-evenly;
+  }
+  .video__iframe {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__list {
+    justify-content: center;
+  }
+  .content {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .content__title {
+    line-height: 1.25;
+  }
+  .video__iframe {
+    height: 350px;
+  }
+}
